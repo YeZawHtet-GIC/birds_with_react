@@ -19,36 +19,43 @@ export default function BirdDetails() {
   };
 
   return (
-    <div className="col-md-6 offset-md-3 bg-dark p-5 rounded text-warning">
-      {isPending && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      {bird && (
-        <div>
-          <h2>{bird.BirdMyanmarName}</h2>
-          <h2>{bird.BirdEnglishName}</h2>
-          <hr />
-          <p>{bird.Description}</p>
-          <img
-            src={process.env.PUBLIC_URL + '/' + bird.ImagePath}
-            alt={bird.BirdEnglishName}
-            className="card-img-top img-fluid"
-            style={{ maxHeight: "300px", objectFit: "cover" }}
-          />
-          <hr />
-          <button onClick={handleClick} className="btn btn-outline-danger mt-3">
-            Delete
-          </button>
-          <button
-            onClick={() => {
-              navigate("/");
-            }}
-            className="btn btn-outline-primary mt-3 mx-3"
-          >
-            Back
-          </button>
-
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-lg-8 offset-lg-2">
+          <div className="card shadow">
+            <div className="card-body">
+              {isPending && <div className="text-center">Loading...</div>}
+              {error && <div className="text-center text-danger">{error}</div>}
+              {bird && (
+                <>
+                  <h2 className="text-center">{bird.BirdMyanmarName}</h2>
+                  <h3 className="text-center mb-4">{bird.BirdEnglishName}</h3>
+                  <div className="text-center mb-4">
+                    <img
+                      src={process.env.PUBLIC_URL + '/' + bird.ImagePath}
+                      alt={bird.BirdEnglishName}
+                      className="img-fluid rounded"
+                      style={{ maxHeight: "400px", objectFit: "cover" }}
+                    />
+                  </div>
+                  <p className="text-center">{bird.Description}</p>
+                  <div className="text-center">
+                    <button onClick={handleClick} className="btn btn-danger me-3">
+                      Delete
+                    </button>
+                    <button
+                      onClick={() => navigate("/")}
+                      className="btn btn-primary"
+                    >
+                      Back
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

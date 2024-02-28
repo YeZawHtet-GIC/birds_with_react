@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+//css 
+import "./css/birdlist.css";
 
 export default function BirdList({ birds }) {
   return (
@@ -7,11 +9,11 @@ export default function BirdList({ birds }) {
       <div className="row row-cols-1 row-cols-md-2 g-4">
         {birds.map((bird) => (
           <div className="col" key={bird.id}>
-            <div className="card h-100">
+            <div className="card h-100 bird-card">
               <img
                 src={bird.ImagePath}
                 alt={bird.BirdEnglishName}
-                className="card-img-top img-fluid"
+                className="card-img-top img-fluid bird-image"
                 style={{ maxHeight: "300px", objectFit: "cover" }}
               />
               <div className="card-body">
