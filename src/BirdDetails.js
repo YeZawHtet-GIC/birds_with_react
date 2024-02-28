@@ -44,7 +44,7 @@ export default function BirdDetails() {
                       Delete
                     </button>
                     <button
-                      onClick={() => navigate("/")}
+                      onClick={() => navigate("/birds")}
                       className="btn btn-primary"
                     >
                       Back
