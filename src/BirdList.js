@@ -9,7 +9,7 @@ export default function BirdList({ birds }) {
       <div className="row row-cols-1 row-cols-lg-3 g-4">
         {birds.map((bird) => (
           <div className="col" key={bird.id} data-aos="zoom-in">
-            <div className="card h-100 bird-card border-0">
+            <div className="card h-100 bird-card shadow rounded border-0">
               <Link to={`/bird/${bird.id}`} className="btn">
                 <img
                   src={bird.ImagePath}

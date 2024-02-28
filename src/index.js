@@ -14,6 +14,7 @@ import Bird from "./Bird";
 //bootstrap import
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 //react router dom
 import { createBrowserRouter, RouterProvider } from "react-router-dom";

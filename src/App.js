@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 //Aos
 import { useEffect } from "react";
 import Aos from "aos";
+import Footer from "./Footer";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
     <>
       <Navbar />
       <Outlet />
+      <Footer />
     </>
   );
 }
