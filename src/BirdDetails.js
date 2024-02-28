@@ -19,7 +19,7 @@ export default function BirdDetails() {
   };
 
   return (
-    <div className="col-md-6 offset-md-3 bg-dark p-5 rounded text-warning">
+    <div className="col-md-8 offset-md-2 bg-dark p-5 mt-3 rounded text-warning">
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {bird && (
